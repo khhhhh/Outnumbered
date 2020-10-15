@@ -1,0 +1,6 @@
+\babel@toc {polish}{}
+\contentsline {chapter}{\numberline {1}Wstęp}{2}{}%
+\contentsline {section}{\numberline {1.1}Opis projektu}{2}{}%
+\contentsline {section}{\numberline {1.2}Historia}{2}{}%
+\contentsline {section}{\numberline {1.3}Główny bohater}{2}{}%
+\contentsline {section}{\numberline {1.4}Ogólny przebieg rozgrywki}{2}{}%
