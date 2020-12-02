@@ -11,8 +11,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
+        private Vector3 moveInput;
+        private Vector3 moveVelocity;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-
+        private Camera mainCamera;
         
         private void Start()
         {
@@ -30,6 +32,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+            mainCamera = FindObjectOfType<Camera>();
         }
 
 
@@ -39,6 +42,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane =  new Plane(Vector3.up, transform.position);
+            
+            
+            float hitdist = 0.0f;  
+            if(groundPlane.Raycast(ray, out hitdist))
+            {
+                Vector3 targetPoint = ray.GetPoint(hitdist);
+                Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 100 * Time.deltaTime);
+            }
+
         }
 
 
@@ -62,9 +78,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 // we use world-relative directions in the case of no main camera
                 m_Move = v*Vector3.forward + h*Vector3.right;
             }
+            m_Move = v*transform.forward + h*transform.right;
+            //m_Move = v*Vector3.forward + h*Vector3.right;
 #if !MOBILE_INPUT
 			// walk speed multiplier
-	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 1.5f;
 #endif
 
             // pass all parameters to the character control script
