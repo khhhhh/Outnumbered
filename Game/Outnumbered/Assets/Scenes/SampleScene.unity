@@ -394,6 +394,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2797200910033802418, guid: fc9b148a2950aaf4cba8422632222c5d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4425428723088313499, guid: fc9b148a2950aaf4cba8422632222c5d,
         type: 3}
       propertyPath: m_Name
@@ -469,7 +474,10 @@ PrefabInstance:
       propertyPath: locomotionType
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4761964918313697783, guid: fc9b148a2950aaf4cba8422632222c5d, type: 3}
+    - {fileID: 2797200910033802418, guid: fc9b148a2950aaf4cba8422632222c5d, type: 3}
+    - {fileID: 4209945269348098690, guid: fc9b148a2950aaf4cba8422632222c5d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fc9b148a2950aaf4cba8422632222c5d, type: 3}
 --- !u!1001 &1884268704
 PrefabInstance:
