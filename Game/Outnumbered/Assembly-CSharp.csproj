@@ -77,7 +77,10 @@
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\BulletControl.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
      <Compile Include="Assets\Scripts\GunController.cs" />
+     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\UserControl.cs" />
      <Compile Include="Assets\ZombieMove.cs" />
