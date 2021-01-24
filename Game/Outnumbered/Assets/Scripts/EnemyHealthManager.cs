@@ -6,6 +6,9 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int health;
     private int currentHealth;
+
+    public EnemyController enemyController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +20,17 @@ public class EnemyHealthManager : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            enemyController.animator.SetBool("dead", true);
+            enemyController.move = false;
+            //Destroy(gameObject);
+            StartCoroutine(Death());
         }
+    }
+
+    private IEnumerator Death()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
 
     public void Hurt(int damage)

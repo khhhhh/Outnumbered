@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerHealthManager : MonoBehaviour
 {
     public int startingHealth;
-    public int currnetHealth;
-
+    private int currnetHealth;
+    public bool isDead;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,10 @@ public class PlayerHealthManager : MonoBehaviour
     void Update()
     {
         if (currnetHealth <= 0)
+        {
             gameObject.SetActive(false);
+            isDead = true;
+        }
     }
 
     public void HurtPlayer(int damage)

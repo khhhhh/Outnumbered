@@ -5,7 +5,7 @@ using UnityEngine;
 public class HurtPlayer : MonoBehaviour
 {
     public int damageToGive;
-    private int timeOfAttack = 5;
+    public int timeOfAttack = 2;
     private int time;
 
     public EnemyController enemyController;
@@ -27,8 +27,8 @@ public class HurtPlayer : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            AttackPlayer(2, other);
             enemyController.animator.SetBool("attack", true);
-            other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
             enemyController.move = false;
         }
     }
@@ -40,5 +40,11 @@ public class HurtPlayer : MonoBehaviour
             enemyController.move = true;
             enemyController.animator.SetBool("attack", false);
         }
+    }
+
+
+    private void AttackPlayer(float t, Collider other)
+    {
+        other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
     }
 }

@@ -9,7 +9,8 @@ public class EnemyController : MonoBehaviour
     public bool move;
     public Animator animator;
     //private Vector3 fixLook;
-    public Invector.vCharacterController.vThirdPersonController player;
+    public Invector.vCharacterController.UserControl player;
+    public PlayerHealthManager playerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,8 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         move = true;
         myRB = GetComponent<Rigidbody>();
-        player = FindObjectOfType<Invector.vCharacterController.vThirdPersonController>();
+        player = FindObjectOfType<Invector.vCharacterController.UserControl>();
+        playerHealth = FindObjectOfType<PlayerHealthManager>();
     }
     void FixedUpdate()
     {
@@ -31,6 +33,9 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform.position /*+ fixLook*/);
+        if(move)
+            transform.LookAt(player.transform.position /*+ fixLook*/);
+        if (playerHealth.isDead)
+            animator.SetBool("seeEnemy", false);
     }
 }
