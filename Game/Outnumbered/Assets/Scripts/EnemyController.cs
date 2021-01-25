@@ -9,8 +9,8 @@ public class EnemyController : MonoBehaviour
     public bool move;
     public Animator animator;
     //private Vector3 fixLook;
-    public Invector.vCharacterController.UserControl player;
-    public PlayerHealthManager playerHealth;
+    private Invector.vCharacterController.UserControl player;
+    private PlayerHealthManager playerHealth;
     // Start is called before the first frame update
     void Start()
     {
