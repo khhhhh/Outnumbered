@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df92eba4828482c46961ada466e9aa01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 1
+  damageToGive: 0
   timeOfAttack: 2
   enemyController: {fileID: 2446953350464403294}
 --- !u!1 &4493914613880827488
@@ -1852,6 +1852,7 @@ MonoBehaviour:
   move: 1
   animator: {fileID: 0}
   player: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!114 &1479438190090899893
 MonoBehaviour:
   m_ObjectHideFlags: 0

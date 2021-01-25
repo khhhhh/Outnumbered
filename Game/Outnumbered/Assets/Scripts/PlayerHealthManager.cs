@@ -7,10 +7,14 @@ public class PlayerHealthManager : MonoBehaviour
     public int startingHealth;
     private int currnetHealth;
     public bool isDead;
+
+    public HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
         currnetHealth = startingHealth;
+        healthBar.SetMaxHealth(startingHealth);
+        isDead = false;
     }
 
     // Update is called once per frame
@@ -26,5 +30,6 @@ public class PlayerHealthManager : MonoBehaviour
     public void HurtPlayer(int damage)
     {
         currnetHealth -= damage;
+        healthBar.SetHealth(currnetHealth);
     }
 }
