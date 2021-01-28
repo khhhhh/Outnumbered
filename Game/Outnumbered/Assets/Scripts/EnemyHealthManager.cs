@@ -6,13 +6,14 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int health;
     private int currentHealth;
-
+    Rigidbody rb;
     public EnemyController enemyController;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = health;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class EnemyHealthManager : MonoBehaviour
         {
             enemyController.animator.SetBool("dead", true);
             enemyController.move = false;
+            rb.detectCollisions = false;
             //Destroy(gameObject);
             StartCoroutine(Death());
         }
