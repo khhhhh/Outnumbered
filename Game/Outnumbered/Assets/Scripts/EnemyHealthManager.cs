@@ -9,6 +9,8 @@ public class EnemyHealthManager : MonoBehaviour
     Rigidbody rb;
     public EnemyController enemyController;
 
+    public NextLevel nl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class EnemyHealthManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
+        nl.killZombie();
     }
 
     public void Hurt(int damage)

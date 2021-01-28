@@ -228,6 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 159033997}
+  - component: {fileID: 159033998}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: GameController
@@ -249,6 +250,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159033998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159033996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951ef2413bd82634db4bbc9e31814f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ZombiesCount: 7
 --- !u!114 &191806615 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2446953350464403294, guid: 6dc4cf4496348884d8ee27743ae38562,
@@ -705,6 +719,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
@@ -949,6 +968,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1692,6 +1716,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1960,6 +1989,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2222,6 +2256,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2345,6 +2384,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2548,6 +2592,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1479438190090899893, guid: 6dc4cf4496348884d8ee27743ae38562,
+        type: 3}
+      propertyPath: nl
+      value: 
+      objectReference: {fileID: 159033998}
     - target: {fileID: 3543990197292828585, guid: 6dc4cf4496348884d8ee27743ae38562,
         type: 3}
       propertyPath: m_IsTrigger
