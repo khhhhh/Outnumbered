@@ -10,12 +10,14 @@ public class EnemyHealthManager : MonoBehaviour
     public EnemyController enemyController;
 
     public NextLevel nl;
-
+    public HealthBar healthBar;
+    public Canvas myCanvas;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = health;
         rb = GetComponent<Rigidbody>();
+        myCanvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -41,5 +43,7 @@ public class EnemyHealthManager : MonoBehaviour
     public void Hurt(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+        myCanvas.enabled = true;
     }
 }

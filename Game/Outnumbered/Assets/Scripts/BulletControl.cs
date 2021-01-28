@@ -6,7 +6,7 @@ public class BulletControl : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    //public GameObject blood;
+    public GameObject blood;
 
     public int damage;
 
@@ -31,7 +31,7 @@ public class BulletControl : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealthManager>().Hurt(damage);
-            //Instantiate(blood, other.gameObject.GetComponent<EnemyHealthManager>().transform.position, other.gameObject.GetComponent<EnemyHealthManager>().transform.rotation);
+            Instantiate(blood, other.gameObject.GetComponent<EnemyHealthManager>().transform.position, other.gameObject.GetComponent<EnemyHealthManager>().transform.rotation);
             //Destroy(blood);
         }
         Destroy(gameObject);
