@@ -654,12 +654,6 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="com.unity.postprocessing.Editor">
- <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.postprocessing.Runtime">
- <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

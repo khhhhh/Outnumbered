@@ -82,6 +82,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BulletControl.cs" />
      <Compile Include="Assets\Scripts\EndOfWinScreen.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
@@ -94,6 +95,7 @@
      <Compile Include="Assets\Scripts\PlayerFollow.cs" />
      <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\UserControl.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -679,12 +681,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.postprocessing.Editor">
- <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.postprocessing.Runtime">
- <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

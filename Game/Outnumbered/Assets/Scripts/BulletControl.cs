@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletControl : MonoBehaviour
 {
     public float speed;
+    
     //public float lifeTime;
     public GameObject blood;
 
@@ -13,6 +14,7 @@ public class BulletControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Bullet");
     }
 
     // Update is called once per frame

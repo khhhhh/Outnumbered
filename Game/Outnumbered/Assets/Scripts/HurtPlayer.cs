@@ -7,10 +7,11 @@ public class HurtPlayer : MonoBehaviour
     public int damageToGive;
     public int timeOfAttack = 2;
     private int time;
-
+    AudioManager sound;
     public EnemyController enemyController;
     void Start()
     {
+        sound = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -21,7 +22,10 @@ public class HurtPlayer : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
+        {
+            sound.Play("Zombie");
             time = (int)Time.deltaTime;
+        }
     }
     public void OnTriggerStay(Collider other)
     {

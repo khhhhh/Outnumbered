@@ -107,6 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  lifeTime: 1
+  impact: {fileID: 8300000, guid: cd520ccb997cec64e8552574178f1b18, type: 3}
   blood: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
   damage: 1
