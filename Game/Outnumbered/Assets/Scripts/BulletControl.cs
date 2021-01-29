@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletControl : MonoBehaviour
 {
     public float speed;
-    public float lifeTime;
+    //public float lifeTime;
     public GameObject blood;
 
     public int damage;
@@ -19,10 +19,10 @@ public class BulletControl : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        lifeTime -= Time.deltaTime;
+        //lifeTime -= Time.deltaTime;
 
-        if (lifeTime <= 0)
-            Destroy(gameObject);
+        //if (lifeTime <= 0)
+        Destroy(gameObject, 1f);
     
     }
 
@@ -31,8 +31,8 @@ public class BulletControl : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealthManager>().Hurt(damage);
-            Instantiate(blood, other.gameObject.GetComponent<EnemyHealthManager>().transform.position, other.gameObject.GetComponent<EnemyHealthManager>().transform.rotation);
-            //Destroy(blood);
+            GameObject effect = Instantiate(blood, other.gameObject.GetComponent<EnemyHealthManager>().transform.position, other.gameObject.GetComponent<EnemyHealthManager>().transform.rotation);
+            Destroy(effect, 1f);
         }
         Destroy(gameObject);
     }

@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   isDead: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1610428171}
 --- !u!1001 &1583517092
 PrefabInstance:
   m_ObjectHideFlags: 0

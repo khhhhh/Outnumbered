@@ -723,8 +723,14 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.postprocessing.Editor">
+ <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.postprocessing.Runtime">
+ <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>D:/Projects/Outnumered2/Outnumbered/Game/Outnumbered/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

@@ -29,7 +29,8 @@ public class GunController : MonoBehaviour
             if(shotCounter <= 0)
             {
                 shotCounter = timeBetweenShots;
-                Instantiate(shotParticle, firePoint.position, firePoint.rotation);
+                GameObject shotPart = Instantiate(shotParticle, firePoint.position, firePoint.rotation);
+                Destroy(shotPart, 1f);
                 BulletControl newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletControl;
                 newBullet.speed = bulletSpeed;
             }
