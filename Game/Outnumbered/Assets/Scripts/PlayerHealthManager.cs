@@ -8,6 +8,7 @@ public class PlayerHealthManager : MonoBehaviour
     public int startingHealth;
     private int currnetHealth;
     public bool isDead;
+    Animator animator;
 
     public HealthBar healthBar;
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class PlayerHealthManager : MonoBehaviour
         currnetHealth = startingHealth;
         healthBar.SetMaxHealth(startingHealth);
         isDead = false;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,9 +25,10 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if (currnetHealth <= 0)
         {
-            gameObject.SetActive(false);
             isDead = true;
-            SceneManager.LoadScene(0);
+            
+            //gameObject.SetActive(false);
+            SceneManager.LoadScene(5);
         }
     }
 

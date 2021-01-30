@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+    public Animator animator;
     public int ZombiesCount = 7;
 
     public void killZombie() 
@@ -13,19 +14,17 @@ public class NextLevel : MonoBehaviour
         ZombiesCount--;
         if(ZombiesCount == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+           StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator LoadLevel(int levelIndex)
     {
-        
+        animator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(levelIndex);
     }
 }

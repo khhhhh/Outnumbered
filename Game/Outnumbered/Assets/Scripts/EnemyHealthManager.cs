@@ -28,6 +28,8 @@ public class EnemyHealthManager : MonoBehaviour
             enemyController.animator.SetBool("dead", true);
             enemyController.move = false;
             rb.detectCollisions = false;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            myCanvas.enabled = false;
             //Destroy(gameObject);
             StartCoroutine(Death());
         }
@@ -36,8 +38,9 @@ public class EnemyHealthManager : MonoBehaviour
     private IEnumerator Death()
     {
         yield return new WaitForSeconds(3);
-        Destroy(gameObject);
         nl.killZombie();
+        Destroy(gameObject);
+        
     }
 
     public void Hurt(int damage)

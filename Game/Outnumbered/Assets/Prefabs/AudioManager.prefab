@@ -63,3 +63,12 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: Forest
+    clip: {fileID: 8300000, guid: e52cee545f9266b47aebbfa5d6576661, type: 3}
+    volume: 0.235
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.322
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

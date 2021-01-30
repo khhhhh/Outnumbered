@@ -7,30 +7,41 @@ namespace Invector.vCharacterController
 {
     public class UserControl : MonoBehaviour
     {
-        private vThirdPersonController m_Character;
+        private Rigidbody m_Character;
+        public float moveSpeed;
         private Vector3 m_Move;
         private Vector3 m_CamForward;
         private Vector3 moveInput;
         private Vector3 moveVelocity;
         private Transform m_Cam;
         private Camera mainCamera;
+        Animator animator;
 
         public GunController gun;
 
         // Start is called before the first frame update
         void Start()
         {
-            m_Character = GetComponent<vThirdPersonController>();
+            m_Character = GetComponent<Rigidbody>();
             mainCamera = FindObjectOfType<Camera>();
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
         void Update()
         {
+            moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+            moveVelocity = moveInput.normalized * moveSpeed;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Plane groundPlane = new Plane(Vector3.up, transform.position);
             //Plane groundPlane = new Plane(new Vector3(-49.54f, 0f, 0f), transform.position);
 
+            if (moveVelocity != Vector3.zero)
+                animator.SetBool("Walk", true);
+            else
+                animator.SetBool("Walk", false);
+
+            m_Character.velocity = moveVelocity;
 
             float hitdist = 0.0f;
             if (groundPlane.Raycast(ray, out hitdist))
@@ -50,10 +61,10 @@ namespace Invector.vCharacterController
 
         private void FixedUpdate()
         {
+
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            bool crouch = Input.GetKey(KeyCode.C);
 
             // calculate move direction to pass to character
             if (m_Cam != null)

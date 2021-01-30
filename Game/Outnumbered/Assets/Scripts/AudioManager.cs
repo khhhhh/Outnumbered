@@ -15,7 +15,8 @@ public class AudioManager : MonoBehaviour
 	{
 		if (instance != null)
 		{
-			Destroy(gameObject);
+			//instance.UnloadAllSoundsAndMusic();
+			//Destroy(gameObject);
 		}
 		else
 		{
